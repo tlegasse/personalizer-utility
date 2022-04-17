@@ -7,9 +7,9 @@ export default function DrawBoxForm(props) {
 
   let drawBoxVariantTemplate = {
     "scale": 1,
-    "left": "",
-    "top": "",
-    "name": "",
+    "left": "0px",
+    "top": "0px",
+    "name": "0px",
     "sizes": "defaultSizes"
   }
 

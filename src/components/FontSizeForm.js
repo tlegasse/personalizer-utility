@@ -8,66 +8,66 @@ export default function FontSizeForm(props) {
   let drawBoxVariantTemplate = {
     "initials": {
       "tekomedium": {
-        "large": 36,
-        "medium": 30,
-        "small": 22
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "stixtwotext": {
-        "large": 24,
-        "medium": 20,
-        "small": 16
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "robotoslab": {
-        "large": 24,
-        "medium": 20,
-        "small": 18
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "montserrat": {
-        "large": 24,
-        "medium": 20,
-        "small": 16
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "blackout2am": {
-        "large": 34,
-        "medium": 28,
-        "small": 20
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "voltage": {
-        "large": 26,
-        "medium": 20,
-        "small": 16
+        "large": 0,
+        "medium": 0,
+        "small": 0
       }
     },
     "name": {
       "tekomedium": {
-        "large": 56,
-        "medium": 46,
-        "small": 36
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "stixtwotext": {
-        "large": 56,
-        "medium": 46,
-        "small": 36
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "robotoslab": {
-        "large": 56,
-        "medium": 46,
-        "small": 36
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "montserrat": {
-        "large": 56,
-        "medium": 46,
-        "small": 36
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "blackout2am": {
-        "large": 56,
-        "medium": 46,
-        "small": 36
+        "large": 0,
+        "medium": 0,
+        "small": 0
       },
       "voltage": {
-        "large": 56,
-        "medium": 46,
-        "small": 36
+        "large": 0,
+        "medium": 0,
+        "small": 0
       }
     }
   }

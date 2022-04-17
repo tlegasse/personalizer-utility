@@ -17,7 +17,7 @@ export default function FontSizeDefinition(props) {
 
   return (
     <div className="sub-variant">
-      {props.sectionName}
+      <p><strong>{props.sectionName}</strong></p>
 
       {Object.keys(props.appData[sku][props.name]).map((key, index) => {
         return (
