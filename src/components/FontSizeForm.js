@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import FontSizeVariant from './FontSizeVariant'
 
 export default function FontSizeForm(props) {
   
   let defaultName = 'variant_sku';
+
+  const [hasInserted, setHasInserted] = useState(false)
 
   let drawBoxVariantTemplate = {
     "initials": {
@@ -88,6 +90,13 @@ export default function FontSizeForm(props) {
     tempAppData[newSku] = drawBoxVariantTemplate;
     props.setAppData(tempAppData)
   }
+
+  useEffect(() => {
+    if(!hasInserted) {
+      addFromVariantTemplate()
+      setHasInserted(true);
+    }
+  })
 
   return (
     <div>

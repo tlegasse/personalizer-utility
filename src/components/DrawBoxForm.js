@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import DrawBoxVariant from './DrawBoxVariant'
 
 export default function DrawBoxForm(props) {
-
   let defaultName = 'variant_sku';
+
+  const [hasInserted, setHasInserted] = useState(false)
 
   let drawBoxVariantTemplate = {
     "scale": 1,
@@ -29,7 +30,14 @@ export default function DrawBoxForm(props) {
     tempAppData[newSku] = drawBoxVariantTemplate;
     props.setAppData(tempAppData)
   }
-  
+
+  useEffect(() => {
+    if(!hasInserted) {
+      addFromVariantTemplate()
+      setHasInserted(true);
+    }
+  })
+
   return (
     <div>
       {Object.keys(props.appData).map((key, index) => {
