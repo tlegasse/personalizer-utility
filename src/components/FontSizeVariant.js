@@ -77,8 +77,8 @@ export default function FontSizeVariant(props) {
       })}
 
       <div className="variant-action-inputs">
-        <button onClick={() => duplicateBySku(sku)}>Duplicate</button>
-        <button onClick={() => removeBySku(sku)}>Remove</button>
+        <button onClick={() => duplicateBySku(sku)}>📄📄</button>
+        <button onClick={() => removeBySku(sku)}>➖</button>
       </div>
     </div>
   )

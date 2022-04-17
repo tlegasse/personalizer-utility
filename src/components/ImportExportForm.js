@@ -26,7 +26,7 @@ export default function ImportExportForm(props) {
       return (
         <CopyToClipboard
           text={tempAppDataString}
-          onCopy={() => alert('Success!')}>
+          onCopy={() => alert('Copied!')}>
             <input type="button" value="📋" />
         </CopyToClipboard>
       )
