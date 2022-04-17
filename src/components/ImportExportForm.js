@@ -27,7 +27,7 @@ export default function ImportExportForm(props) {
         <CopyToClipboard
           text={tempAppDataString}
           onCopy={() => alert('Success!')}>
-            <input type="button" value="Export Data" />
+            <input type="button" value="📋" />
         </CopyToClipboard>
       )
     } else {
