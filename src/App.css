@@ -1,38 +1,95 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-columns {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
 }
 
-.App-link {
-  color: #61dafb;
+.app-columns > .app-column {
+  width: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-columns > .app-column:nth-child(1) {
+  max-width: calc(50% - 15px);
+  padding-right: 7px;
+  margin-right: 7px;
+  border-right: 1px solid #333;
+}
+
+.app-columns > .app-column:nth-child(2) {
+  padding: 10px 10px 10px 3px;
+}
+
+
+.import-export-controls input,
+.import-export-controls button {
+  margin-top: 15px;
+  width: 150px;
+}
+
+.import-export-controls textarea {
+  width: 100%;
+  min-height: 500px;
+}
+.import-export-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-around;
+}
+
+
+.react-tabs__tab-panel {
+  height: calc(100vh - 46px);
+  overflow-y: auto;
+  padding: 0 15px;
+}
+
+.block-label {
+  display: block;
+}
+
+.block-label span {
+  min-width: 75px;
+  display: inline-block;
+}
+
+.variant {
+  border-radius: 5px;
+  background-color: #eaeaea;
+  margin-bottom: 15px;
+  display: block;
+  padding: 5px;
+  position: relative;
+}
+
+.variant-action-inputs  {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.sub-variant {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.single-font-definition {
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.single-font-definition > label {
+  display: block;
+  font-weight: 500;
+}
+
+
+.inline-labels {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.inline-labels input {
+  width: 75px;
+  margin-left: 15px;
+  margin-top: 5px;
 }
