@@ -43,7 +43,7 @@ export default function DrawBoxForm(props) {
         )
       })}
 
-      <button className="pad-below" onClick={addFromVariantTemplate} title="Add new variant">➕</button>
+      <button className="pad-below" onClick={addFromVariantTemplate} title="Add new variant">[➕]</button>
     </div>
   )
 }

@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import AppInfo from './AppInfo';
 
 export default function ImportExportForm(props) {
 
   const [tempAppDataString, setTempAppDataString] = useState(JSON.stringify(props.appData, null, 2))
+  const [buttonMessage, setButtonMessage] = useState('[📋]')
 
   let parseInput = () => {
     if(validateJson(tempAppDataString)) {
@@ -24,19 +26,24 @@ export default function ImportExportForm(props) {
   let ErrorOrButton = () => {
     if(validateJson(tempAppDataString)) {
       return (
-        <CopyToClipboard
-          text={tempAppDataString}
-          onCopy={() => alert('Copied!')}>
-            <input type="button" value="📋" />
-        </CopyToClipboard>
+        <input
+          type="button"
+          value="[Import Data]"
+          onClick={parseInput}
+        />
       )
     } else {
-      return <span>Something isn't right</span>
+      return <span className="error-message">[^Something in there isn't right...]</span>
     }
   }
 
   let updateTempAppDataString = () => {
     setTempAppDataString(JSON.stringify(props.appData, null, 2))
+  }
+
+  let setButtonSuccess = () => {
+    setButtonMessage('[✅]')
+    window.setTimeout(() => {setButtonMessage('[📋]')}, 1000)
   }
 
   return (
@@ -47,19 +54,21 @@ export default function ImportExportForm(props) {
       </textarea>
 
       <div className="import-export-buttons">
-        <input
-          type="button"
-          value="Import Data"
-          onClick={parseInput}
-        />
+        
+        <ErrorOrButton />
         
         <input
           type="button"
-          value="Update Text Box"
+          value="[Update Text Box]"
           onClick={updateTempAppDataString}
         />
         
-        <ErrorOrButton />
+        <CopyToClipboard
+          text={tempAppDataString}
+          onCopy={setButtonSuccess}>  
+          <input type="button" value={buttonMessage} />
+        </CopyToClipboard>
+        <AppInfo />
       </div>
     </div>
   )

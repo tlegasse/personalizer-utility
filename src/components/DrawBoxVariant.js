@@ -80,8 +80,8 @@ export default function DrawBoxVariant(props) {
         </label>
 
         <div className="variant-action-inputs">
-          <button onClick={() => duplicateBySku(sku)} title="Duplicate">📄📄</button>
-          <button onClick={() => removeBySku(sku)} title="Remove">➖</button>
+          <button onClick={() => duplicateBySku(sku)} title="Duplicate">[📄📄]</button>
+          <button onClick={() => removeBySku(sku)} title="Remove">[➖]</button>
         </div>
       </div>
     </div>

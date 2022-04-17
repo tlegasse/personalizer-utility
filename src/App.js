@@ -22,8 +22,8 @@ function App() {
         <div className="app-column">
           <Tabs onSelect={resetAppData}>
             <TabList>
-              <Tab>Draw Boxes</Tab>
-              <Tab>Font Sizes</Tab>
+              <Tab>[Draw Boxes]</Tab>
+              <Tab>[Font Sizes]</Tab>
             </TabList>
         
             <TabPanel>

@@ -1,3 +1,6 @@
+body {
+  background-color: #f2f2f2;
+}
 .app-columns {
   display: flex;
   flex-direction: row;
@@ -11,7 +14,7 @@
   max-width: calc(50% - 7px);
   padding-right: 0px;
   margin-right: 7px;
-  border-right: 1px solid #333;
+  border-right: 1px solid #aaaaaa;
 }
 
 .app-columns > .app-column:nth-child(2) {
@@ -19,25 +22,39 @@
 }
 
 
-.import-export-controls input,
-.import-export-controls button {
+input[type="button"],
+button {
   margin-top: 15px;
-  width: 150px;
+  background-color: transparent;
+  border: none;
+  color: blue;
+  font-size: 18px;
+}
+
+input[type="button"]:hover,
+button:hover {
+  background-color:rgb(201, 201, 255);
+  cursor: pointer;
 }
 
 .import-export-controls textarea {
   width: 100%;
-  height: calc(100vh - 80px);
+  background-color: transparent;
+  height: calc(100vh - 105px);
 }
+
 .import-export-buttons {
   display: block;
   text-align: center;
-  height: 50px;
+  height: 75px;
 }
 
 
 .react-tabs__tab-panel {
-  background-color: #fbf9f0;
+  background-color: #f4f0df;
+  opacity: 0.8;
+  background: radial-gradient(circle, transparent 20%, #f4f0df 20%, #f4f0df 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #f4f0df 20%, #f4f0df 80%, transparent 80%, transparent) 40px 40px, linear-gradient(#fbf9f0 3.2px, transparent 3.2px) 0 -1.6px, linear-gradient(90deg, #fbf9f0 3.2px, #f4f0df 3.2px) -1.6px 0;
+  background-size: 80px 80px, 80px 80px, 40px 40px, 40px 40px;
   height: calc(100vh - 50px);
   overflow-y: auto;
   padding: 15px 15px 0;
@@ -109,7 +126,7 @@
 }
 
 .react-tabs__tab--selected {
-  background-color: #fbf9f0!important;
+  background-color: #f6f3e5!important;
 }
 
 * {
@@ -118,4 +135,20 @@
 
 .pad-below {
   margin-bottom: 15px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.app-info-button {
+  display: block;
+  margin: 15px auto;
+}
+
+.error-message {
+  font-size: 18px;
+  color: red;
 }
