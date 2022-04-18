@@ -14,15 +14,11 @@ export default function FontSizeVariant(props) {
   };
 
   const updateSku = (event) => {
-    let tempAppData = Object.assign({}, props.appData)
-    let tempVariant = tempAppData[sku]
-
-    delete tempAppData[sku];
-
-    tempAppData[event.target.value] = tempVariant;
+    let tempAppDataStr = JSON.stringify(props.appData)
+    tempAppDataStr = tempAppDataStr.replace('"' + sku + '"', '"' + event.target.value + '"')
+    let tempAppData = JSON.parse(tempAppDataStr)
 
     props.setAppData(tempAppData)
-    console.log(props.appData)
   }
 
   const duplicateBySku = (sku) => {

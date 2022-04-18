@@ -5,15 +5,9 @@ export default function AppInfo() {
   
   const [showModal, setShowModal] = useState(false)
   
-  const handleOpenModal = () => {
-    console.log('handleOpenModal')
-    setShowModal(true);
-  }
+  const handleOpenModal = () => setShowModal(true);
   
-  const handleCloseModal = () => {
-    console.log('handleCloseModal')
-    setShowModal(false);
-  }
+  const handleCloseModal = () => setShowModal(false);
   
   return (
     <>

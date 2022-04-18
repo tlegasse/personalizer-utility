@@ -93,10 +93,36 @@ export default function FontSizeForm(props) {
 
   useEffect(() => {
     if(!hasInserted) {
+      console.log(props.appData)
       addFromVariantTemplate()
       setHasInserted(true);
     }
   })
+
+  
+  const validates = (appData) => {
+    try {
+      for(let key of Object.keys(appData)) {
+        if(typeof appData[key] !== 'object') {
+          throw new Error('Error decoding');
+        } else {
+          for(let innerKey of Object.keys(appData[key])) {
+            if(typeof appData[key][innerKey] !== 'object') throw new Error('Error validating input')
+          }
+        }
+      }
+      return true;
+    } catch (e) {
+      console.log(e)
+      return false;
+    }
+  }
+
+  if(!validates(props.appData)) {
+    return (
+      <p style={{color:"red"}}>An error was encountered, please check your input and try again.<br/>You a dev? Check the console.</p>
+    )
+  }
 
   return (
     <div>
