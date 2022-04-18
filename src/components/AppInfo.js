@@ -34,7 +34,7 @@ export default function AppInfo() {
         <p>&nbsp;<strong>No, I'm starting fresh.</strong></p>
         <ol>
           <li>Click into the column you'd like to create data for.</li>
-          <li>Click the "➕" button to add a new variant.</li>
+          <li>Click the "➕" button to add as many new variants after the first one as is needed.</li>
           <li>Make any changes you'd like to the boxes that now appear, be sure not to neglect the sku!</li>
           <li>Once you're done making changes, click "Update Text Box" and ensure that everything looks good ✅</li>
           <li>Click the copy to clipboard button "📋"</li>
