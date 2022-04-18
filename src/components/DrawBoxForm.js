@@ -31,6 +31,7 @@ export default function DrawBoxForm(props) {
     props.setAppData(tempAppData)
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if(!hasInserted) {
       addFromVariantTemplate()

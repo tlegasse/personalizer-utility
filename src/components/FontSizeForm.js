@@ -91,6 +91,7 @@ export default function FontSizeForm(props) {
     props.setAppData(tempAppData)
   }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     if(!hasInserted) {
       console.log(props.appData)
