@@ -4,8 +4,9 @@ export default function DrawBoxVariant(props) {
   const sku = props.sku
   
   const updateAppDataFromInputs = (event) => {
+    const name = event.target.getAttribute('name');
     const tempAppData = Object.assign({}, props.appData);
-    tempAppData[props.sku][event.target.getAttribute('name')] = event.target.value;
+    tempAppData[props.sku][name] = (name === 'scale') ? parseInt(event.target.value) : event.target.value;
 
     props.setAppData(tempAppData)
   }
